@@ -1,0 +1,47 @@
+{
+  "typescript.inlayHints.parameterNames.enabled": "all",
+  "typescript.inlayHints.variableTypes.enabled": true,
+  "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "typescript.referencesCodeLens.enabled": true,
+  "typescript.implementationsCodeLens.enabled": true,
+  "editor.quickSuggestions": {
+    "comments": false,
+    "strings": true,
+    "other": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "eslint.validate": ["typescript", "javascript"],
+  "eslint.format.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit"
+  },
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "cSpell.words": [
+    "alertdialog",
+    "autologin",
+    "calllog",
+    "cciq",
+    "creds",
+    "Hsim",
+    "lastmodifieddate",
+    "linebreak",
+    "menuitemradio",
+    "PGIBL",
+    "Picklists",
+    "randomstring",
+    "responce",
+    "slds",
+    "sobjects",
+    "SOQL",
+    "SOSL",
+    "Subrequest",
+    "Subrequests",
+    "tablist"
+  ]
+}

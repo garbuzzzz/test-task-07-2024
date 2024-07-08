@@ -1,0 +1,15 @@
+# IDE
+.idea
+.vscode
+.postman
+
+# Git
+.github
+.gitignore
+
+# Caches
+node_modules
+.pics
+
+# Docker
+docker-compose.yml
