@@ -10,7 +10,7 @@
     "eslint": "npx eslint .",
     "postinstall": "npx playwright install",
     "test": "npm run pretest & cross-env org=QA npx playwright test",
-    "debug": "npm run pretest & cross-env org=QA npx playwright test --headed"
+    "debug": "npm run pretest & cross-env org=QA npx playwright test --headed --workers=1"
   },
   "engines": {
     "node": ">=16"

@@ -25,15 +25,19 @@
   "cSpell.words": [
     "alertdialog",
     "autologin",
+    "Babyhug",
     "calllog",
     "cciq",
     "creds",
+    "firstname",
     "Hsim",
     "lastmodifieddate",
+    "lastname",
     "linebreak",
     "menuitemradio",
     "PGIBL",
     "Picklists",
+    "productinfo",
     "randomstring",
     "responce",
     "slds",
@@ -42,6 +46,7 @@
     "SOSL",
     "Subrequest",
     "Subrequests",
-    "tablist"
+    "tablist",
+    "zipcode"
   ]
 }

@@ -1,19 +1,10 @@
 import { defineConfig } from '@playwright/test';
 export default defineConfig({
-  globalSetup: require.resolve('./src/global/global.setup.ts'),
   projects: [
     {
-      name: 'autologin',
-      testMatch: /.*\.setup\.ts/,
-      fullyParallel: true,
-      use: { screenshot: 'retain-on-failure' },
-    },
-    {
-      name: 'ui-tests',
-      dependencies: ['autologin'],
+      name: 'test-project',
       use: {
-        baseURL: 'https://cunning-impala-mghtzk-dev-ed.trailblaze.lightning.force.com/lightning/o/Account/list?filterName=Recent',
-        storageState: 'autologinState.json',
+        baseURL: 'https://automationexercise.com/',
         video: {
           mode: 'retain-on-failure',
           size: { width: 640, height: 480 },
@@ -21,6 +12,7 @@ export default defineConfig({
         screenshot: 'on',
         trace: 'retain-on-failure',
       },
+      timeout: 120000,
     },
   ],
   reporter: [
