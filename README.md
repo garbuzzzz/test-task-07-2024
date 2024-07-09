@@ -5,9 +5,11 @@ This project is a simplified version of a more complex boilerplate project desig
 
 
 # Setup instructions
-install dependencies:           npm i
-run tests:                      npm test
-run tests in headed mode:       npm run debug
+| Task                           | Command           |
+|--------------------------------|-------------------|
+| **Install dependencies**       | `npm install`      |
+| **Run tests**                  | `npm test`         |
+| **Run tests in headed mode**   | `npm run debug`    |
 
 
 # Project Structure
