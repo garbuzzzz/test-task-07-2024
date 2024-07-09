@@ -1,4 +1,4 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 import ProductsPage from './ProductsPage';
 import Navigation from './Navigation';
 import { NavBarItem } from 'src/types/typesUI';
@@ -7,10 +7,21 @@ const MIN_TIMEOUT = 4000;
 export default class HomePage {
   productsPage: ProductsPage;
   navigation: Navigation;
+  header: Locator;
+  carousel: Locator;
   constructor(public page: Page) {
     this.page = page;
     this.productsPage = new ProductsPage(page);
     this.navigation = new Navigation(page);
+    this.header = page
+      .getByRole('heading', { name: 'AutomationExercise' })
+      .locator('span');
+    this.carousel = page.locator('.carousel-inner').first();
+  }
+
+  // locators
+  getNavBarItemLocator(navBarItem: NavBarItem) {
+    return this.page.locator(`//a[@href='/${navBarItem}']`);
   }
 
   /**
@@ -36,7 +47,7 @@ export default class HomePage {
    * @param { NavBarItem } navBarItem - Nav bar item title
    */
   private async navigateToNavBarItem(navBarItem: NavBarItem) {
-    await this.page.locator(`//a[@href='/${navBarItem}']`).click();
+    await this.getNavBarItemLocator(navBarItem).click();
   }
 
   /**
@@ -50,13 +61,7 @@ export default class HomePage {
    * Verifies Home Page is visible
    */
   private async verifyHomePageVisible() {
-    await this.page
-      .getByRole('heading', { name: 'AutomationExercise' })
-      .locator('span')
-      .isVisible({ timeout: MIN_TIMEOUT });
-    await this.page
-      .locator('.carousel-inner')
-      .first()
-      .isVisible({ timeout: MIN_TIMEOUT });
+    await this.header.isVisible({ timeout: MIN_TIMEOUT });
+    await this.carousel.isVisible({ timeout: MIN_TIMEOUT });
   }
 }
